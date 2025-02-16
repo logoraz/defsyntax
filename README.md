@@ -1,4 +1,4 @@
-# deflux
+# defsyntax
 
 A Simple Web Application written in Common Lisp. This system is more or less a playground
 to learn/play with Common Lisp and capture my findings here.
@@ -21,7 +21,7 @@ to learn/play with Common Lisp and capture my findings here.
 
 ```sh
 
-  $ guix shell -m path/to/deflux/guix.scm -- sbcl
+  $ guix shell -m path/to/defsyntax/guix.scm -- sbcl
 
 
 ```
