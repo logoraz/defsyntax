@@ -1,8 +1,8 @@
-(defpackage :deflux/templates/root-template
+(defpackage :defsyntax/templates/root-template
   (:use :cl)
   (:export #:*template-root*
            #:*template-product*))
-(in-package :deflux/templates/root-template)
+(in-package :defsyntax/templates/root-template)
 
 (defparameter *template-root* "
 <title> Lisp Web App </title>

@@ -11,7 +11,7 @@
 
 #-asdf3.1 (error "SWACL requires ASDF 3.1.2 or later.")
 
-(defsystem "deflux"
+(defsystem "defsyntax"
   :description "A Simple Web Application written in Common Lisp."
   :author "Erik Almaraz <erikalmaraz@fastmail.com>"
   :license "BSD-3 Clause"
@@ -20,12 +20,12 @@
   :depends-on ("hunchentoot"
                "easy-routes"
                "djula"
-               "deflux/core/all")
-  :in-order-to ((test-op (test-op "deflux/tests"))))
+               "defsyntax/core/all")
+  :in-order-to ((test-op (test-op "defsyntax/tests"))))
 
-(defsystem "deflux/tests"
-  :depends-on ("deflux/tests/all")
+(defsystem "defsyntax/tests"
+  :depends-on ("defsyntax/tests/all")
   :perform (test-op (o c) (symbol-call :swacl/tests/all :run-all-tests)))
 
-(register-system-packages "deflux/core/all" '(:swacl/core))
-(register-system-packages "deflux/tests/all" '(:swacl/tests))
+(register-system-packages "defsyntax/core/all" '(:swacl/core))
+(register-system-packages "defsyntax/tests/all" '(:swacl/tests))

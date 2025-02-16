@@ -1,5 +1,5 @@
 ;;;;; All tests
-(defpackage :deflux/tests/all
-  (:nicknames :deflux/tests)
-  (:use :deflux/tests/base)
+(defpackage :defsyntax/tests/all
+  (:nicknames :defsyntax/tests)
+  (:use :defsyntax/tests/base)
   (:export #:test-suite))

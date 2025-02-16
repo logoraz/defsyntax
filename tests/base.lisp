@@ -1,8 +1,8 @@
-(defpackage :deflux/tests/base
+(defpackage :defsyntax/tests/base
   (:use :cl
         :rove)
   (:export #:test-suite))
-(in-package :deflux/tests/base)
+(in-package :defsyntax/tests/base)
 
 
 (def-suite test-suite

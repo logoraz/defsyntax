@@ -1,9 +1,9 @@
-(defpackage :deflux/core/swacl
+(defpackage :defsyntax/core/swacl
   (:use :cl
-        :deflux/core/database
-        :deflux/templates/root-template)
+        :defsyntax/core/database
+        :defsyntax/templates/root-template)
   (:export #:start-server))
-(in-package :deflux/core/swacl)
+(in-package :defsyntax/core/swacl)
 
 ;;; First Route
 (defvar *server* nil
