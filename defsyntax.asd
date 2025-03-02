@@ -11,7 +11,7 @@
 
 #-asdf3.1 (error "SWACL requires ASDF 3.1.2 or later.")
 
-(defsystem "defsyntax"
+(defsystem #:defsyntax
   :description "A Simple Web Application written in Common Lisp."
   :author "Erik Almaraz <erikalmaraz@fastmail.com>"
   :license "BSD-3 Clause"
@@ -25,7 +25,8 @@
 
 (defsystem "defsyntax/tests"
   :depends-on ("defsyntax/tests/all")
-  :perform (test-op (o c) (symbol-call :swacl/tests/all :run-all-tests)))
+  :perform (test-op (o c) (symbol-call #:swacl/tests/all #:run-all-tests)))
 
-(register-system-packages "defsyntax/core/all" '(:swacl/core))
-(register-system-packages "defsyntax/tests/all" '(:swacl/tests))
+#+sbcl
+(register-system-packages "defsyntax/core/all" '(#:swacl/core))
+(register-system-packages "defsyntax/tests/all" '(#:swacl/tests))

@@ -1,5 +1,5 @@
 ;;;;; All tests
-(defpackage :defsyntax/tests/all
-  (:nicknames :defsyntax/tests)
-  (:use :defsyntax/tests/base)
+(defpackage #:defsyntax/tests/all
+  (:use #:defsyntax/tests/base)
+  (:nicknames #:defsyntax/tests)
   (:export #:test-suite))

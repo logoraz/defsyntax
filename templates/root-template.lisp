@@ -1,8 +1,8 @@
-(defpackage :defsyntax/templates/root-template
-  (:use :cl)
+(defpackage #:defsyntax/templates/root-template
+  (:use #:cl)
   (:export #:*template-root*
            #:*template-product*))
-(in-package :defsyntax/templates/root-template)
+(in-package #:defsyntax/templates/root-template)
 
 (defparameter *template-root* "
 <title> Lisp Web App </title>
@@ -20,6 +20,7 @@
 (defparameter *template-product* "
 <body>
   {{ product }}
+  {% if debug %} debug info! {% endif $}
 </body>
 ")
 

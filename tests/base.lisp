@@ -1,8 +1,8 @@
-(defpackage :defsyntax/tests/base
-  (:use :cl
-        :rove)
+(defpackage #:defsyntax/tests/base
+  (:use #:cl
+        #:rove)
   (:export #:test-suite))
-(in-package :defsyntax/tests/base)
+(in-package #:defsyntax/tests/base)
 
 
 (def-suite test-suite

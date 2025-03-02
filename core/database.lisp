@@ -1,8 +1,8 @@
-(defpackage :defsyntax/core/database
-  (:use :cl)
+(defpackage #:defsyntax/core/database
+  (:use #:cl)
   (:export #:products
            #:get-product))
-(in-package :defsyntax/core/database)
+(in-package #:defsyntax/core/database)
 
 
 (defun products (&optional (n 5))

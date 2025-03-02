@@ -1,8 +1,8 @@
 ;;;; All general interfaces + common core of pure and stateful data structures
 
-(uiop:define-package :defsyntax/core/all
-  (:nicknames :defsyntax)
-  (:use :cl)
+(uiop:define-package #:defsyntax/core/all
+  (:use #:cl)
+  (:nicknames #:defsyntax)
   (:use-reexport
-   :defsyntax/core/database
-   :defxyntax/core/swacl))
+   #:defsyntax/core/database
+   #:defsyntax/core/defsyntax))

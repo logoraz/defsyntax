@@ -1,9 +1,9 @@
-(defpackage :defsyntax/core/swacl
-  (:use :cl
-        :defsyntax/core/database
-        :defsyntax/templates/root-template)
+(defpackage #:defsyntax/core/defsyntax
+  (:use #:cl
+        #:defsyntax/core/database
+        #:defsyntax/templates/root-template)
   (:export #:start-server))
-(in-package :defsyntax/core/swacl)
+(in-package #:defsyntax/core/defsyntax)
 
 ;;; First Route
 (defvar *server* nil
@@ -26,10 +26,13 @@
    :products (get-product n)))
 
 (easy-routes:defroute root ("/") ()
-  (render *template-root* :products (products)))
+  (render *template-root* 
+          :products (products)))
 
-(easy-routes:defroute product-route ("/product/:n") (&path (n 'integer))
-  (render *template-product* :product (get-product n)))
+(easy-routes:defroute product-route ("/product/:n") (&get debug)
+  (render *template-product* 
+          :product (get-product n)
+          :debug debug))
 
 (defun start-server (&key (port *port*))
   "Start server."
