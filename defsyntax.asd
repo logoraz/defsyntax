@@ -17,7 +17,8 @@
   :license "BSD-3 Clause"
   :version (read-file-form "version.text")
   :class :package-inferred-system
-  :depends-on ("hunchentoot"
+  :depends-on ("iterate"
+               "hunchentoot"
                "easy-routes"
                "djula"
                "defsyntax/core/all")

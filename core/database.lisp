@@ -1,5 +1,6 @@
 (defpackage #:defsyntax/core/database
-  (:use #:cl)
+  (:use #:cl
+        #:iterate) ;; for extended iteration features
   (:export #:products
            #:get-product))
 (in-package #:defsyntax/core/database)
