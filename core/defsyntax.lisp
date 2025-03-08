@@ -1,38 +1,19 @@
 (defpackage #:defsyntax/core/defsyntax
   (:use #:cl
-        #:defsyntax/core/database
-        #:defsyntax/templates/root-template)
+        #:defsyntax/core/templates
+        #:defsyntax/core/models
+        #:defsyntax/core/routes)
   (:export #:start-server
            #:stop-server))
 (in-package #:defsyntax/core/defsyntax)
 
-;;; First Route
-(defvar *server* nil
-  "Server instance (Hunchentoot acceptor).")
 
+;; Parameters
 (defparameter *port* 8899 "The application port.")
 
-(defun render (template &rest args)
-  (apply
-   #'djula:render-template*
-   (djula::compile-string template)
-   nil
-   args))
-
-(defun render-product (n)
-  "Render products."
-  (djula:render-template*
-   (djula::compile-string *template-product*) 
-   nil
-   :products (get-product n)))
-
-(easy-routes:defroute root ("/") ()
-  (render *template-root* 
-          :products (products)))
-
-(easy-routes:defroute product-route ("/product/:n") ()
-  (render *template-product* 
-          :product (get-product n)))
+;; Internal variables
+(defvar *server* nil
+  "Server instance (Hunchentoot acceptor).")
 
 (defun start-server (&key (port *port*))
   "Start server."

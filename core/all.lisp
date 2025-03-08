@@ -4,5 +4,7 @@
   (:nicknames #:defsyntax)
   (:use #:cl)
   (:use-reexport
-   #:defsyntax/core/database
+   #:defsyntax/core/templates
+   #:defsyntax/core/models
+   #:defsyntax/core/routes
    #:defsyntax/core/defsyntax))
