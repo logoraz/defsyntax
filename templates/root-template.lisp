@@ -13,14 +13,13 @@
       <a href=\"/product/{{ product.0}}\">{{ product.1 }} - {{ product.2 }}</a>
     </li>
   {% endfor %}
-  <ul>
+  </ul>
 </body>
 ")
 
 (defparameter *template-product* "
 <body>
   {{ product }}
-  {% if debug %} debug info! {% endif $}
 </body>
 ")
 

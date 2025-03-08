@@ -2,7 +2,8 @@
   (:use #:cl
         #:defsyntax/core/database
         #:defsyntax/templates/root-template)
-  (:export #:start-server))
+  (:export #:start-server
+           #:stop-server))
 (in-package #:defsyntax/core/defsyntax)
 
 ;;; First Route
@@ -29,10 +30,9 @@
   (render *template-root* 
           :products (products)))
 
-(easy-routes:defroute product-route ("/product/:n") (&get debug)
+(easy-routes:defroute product-route ("/product/:n") ()
   (render *template-product* 
-          :product (get-product n)
-          :debug debug))
+          :product (get-product n)))
 
 (defun start-server (&key (port *port*))
   "Start server."

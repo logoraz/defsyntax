@@ -15,7 +15,7 @@
   :description "A Simple Web Application written in Common Lisp."
   :author "Erik Almaraz <erikalmaraz@fastmail.com>"
   :license "BSD-3 Clause"
-  :version (read-file-form "version.text")
+  :version "0.0.1"
   :class :package-inferred-system
   :depends-on ("iterate"
                "hunchentoot"
