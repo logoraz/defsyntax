@@ -25,9 +25,14 @@
   :in-order-to ((test-op (test-op "defsyntax/tests"))))
 
 (defsystem "defsyntax/tests"
-  :depends-on ("defsyntax/tests/all")
+  :depends-on ("rove"
+               "defsyntax/tests/all")
   :perform (test-op (o c) (symbol-call #:swacl/tests/all #:run-all-tests)))
 
-#+sbcl
-(register-system-packages "defsyntax/core/all" '(#:swacl/core))
-(register-system-packages "defsyntax/tests/all" '(#:swacl/tests))
+
+(register-system-packages "defsyntax/core/all" '(#:defsyntax/core))
+(register-system-packages "defsyntax/tests/all" '(#:defsyntax/tests))
+
+(register-system-packages
+ "closer-mop"
+ '(:c2mop :closer-common-lisp :c2cl :closer-common-lisp-user :c2cl-user))
