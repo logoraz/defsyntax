@@ -20,22 +20,15 @@
 ;;;   *sdraw-leading-arrow*   Initially nil.  Set to t to get leading arrows.
 ;;;
 
-(defpackage #:cl-sdraw/sdraw
+(defpackage #:defsyntax/library/learn/sdraw
   (:use #:cl)
   (:export #:sdraw
            #:sdraw-loop
            #:scrawl
            #:*sdraw-print-circle*
            #:*sdraw-leading-arrow*))
-(in-package #:cl-sdraw/sdraw)
+(in-package #:defsyntax/library/learn/sdraw)
 
-;; (export '(sdraw::sdraw sdraw::sdraw-loop sdraw::scrawl
-;; 	  sdraw::*sdraw-print-circle* sdraw::*sdraw-leading-arrow*))
-
-;; (shadowing-import  '(sdraw::sdraw sdraw::sdraw-loop sdraw::scrawl
-;; 		     sdraw::*sdraw-print-circle*
-;; 		     sdraw::*sdraw-leading-arrow*)
-;; 		   (find-package :common-lisp-user))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;

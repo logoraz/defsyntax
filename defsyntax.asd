@@ -21,17 +21,20 @@
                "hunchentoot"
                "easy-routes"
                "djula"
-               "defsyntax/core/all")
+               "defsyntax/core/all"
+               "defsyntax/library/learn/all")
   :in-order-to ((test-op (test-op "defsyntax/tests"))))
+
 
 (defsystem "defsyntax/tests"
   :depends-on ("rove"
                "defsyntax/tests/all")
-  :perform (test-op (o c) (symbol-call #:swacl/tests/all #:run-all-tests)))
+  :perform (test-op (o c) (symbol-call #:defsyntax/tests/all #:run-all-tests)))
 
 
-(register-system-packages "defsyntax/core/all" '(#:defsyntax/core))
-(register-system-packages "defsyntax/tests/all" '(#:defsyntax/tests))
+(register-system-packages "defsyntax/core/all" '(#:defsyntax))
+(register-system-packages "defsyntax/library/learn/all" '(#:learn))
+(register-system-packages "defsyntax/tests/all" '(#:tests))
 
 (register-system-packages
  "closer-mop"
